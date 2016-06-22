@@ -5,6 +5,8 @@ def print_file_content(filename)
   STDOUT.flush
 end
 
-ARGV.each do |arg|
-  print_file_content(arg)
+if __FILE__ == $0
+  ARGV.each do |arg|
+    print_file_content(arg)
+  end
 end
